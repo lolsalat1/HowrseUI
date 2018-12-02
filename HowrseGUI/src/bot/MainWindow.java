@@ -173,16 +173,24 @@ public class MainWindow {
 		
 
 		Iterator<Breed> iterator = b.data.values().iterator();
+		HashMap<String, java.awt.Button> buttons = new HashMap<String, Button>();
 		
 		while(iterator.hasNext()) {
 			Breed breed = iterator.next();
 			
 			String name = breed.name;
+			
+			Button btn = new Button(grpBreeds, SWT.RADIO);
+			btn.setText(name);
+			
+			buttons.put(name, btn);
+			
 			//	TODO - Für jeden Breed wird ein Button erstellt:
 			//	Button [HIER DER BREED NAME] = new Button(grpBreeds, SWT.RADIO); <-- Dass geht nicht so wirklich so
 			//	Defaults.setText("[BREED NAME]");
 		}
 		
+		// um ein button mit name <name> zu bekommen: Button whatever = buttons.get(<name>);
 		
 		
 		
