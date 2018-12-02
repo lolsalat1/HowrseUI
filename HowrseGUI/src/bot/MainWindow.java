@@ -172,9 +172,17 @@ public class MainWindow {
 		
 		
 
-		//	TODO - Für jeden Breed wird ein Button erstellt:
-		//	Button [HIER DER BREED NAME] = new Button(grpBreeds, SWT.RADIO);
-		//	Defaults.setText("[BREED NAME]");
+		Iterator<Breed> iterator = b.data.values().iterator();
+		
+		while(iterator.hasNext()) {
+			Breed breed = iterator.next();
+			
+			String name = breed.name;
+			//	TODO - Für jeden Breed wird ein Button erstellt:
+			//	Button [HIER DER BREED NAME] = new Button(grpBreeds, SWT.RADIO); <-- Dass geht nicht so wirklich so
+			//	Defaults.setText("[BREED NAME]");
+		}
+		
 		
 		
 		
